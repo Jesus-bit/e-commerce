@@ -1,5 +1,6 @@
 import React, {useContext} from 'react'
 import { Link } from 'react-router-dom';
+import {Helmet} from 'react-helmet';
 import Layout from '../components/Layout';
 import OrderItem from '../components/OrderItem';
 import AppContext from '../context/AppContext';
@@ -12,6 +13,10 @@ export default function Checkout() {
   } = useContext(AppContext);
   return (
     <Layout>
+      <Helmet>
+        <title>Checkout</title>
+        <meta name="description" content="the Section for checkout buy" />
+      </Helmet>
       <div className="w-screen p-6 items-center flex justify-center flex-col">
         <div className="w-full">
           <h2 className="font-medium text-lg">{state.cart.length 

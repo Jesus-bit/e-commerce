@@ -1,5 +1,6 @@
 import React, {useContext , useRef} from 'react';
-import { Link, useNavigate  } from 'react-router-dom'
+import { Link, useNavigate  } from 'react-router-dom';
+import {Helmet} from 'react-helmet';
 import Layout from '../components/Layout';
 import AppContext from '../context/AppContext';
 
@@ -22,6 +23,10 @@ export default function Information() {
   
   return (
     <Layout>
+      <Helmet>
+        <title>Information</title>
+        <meta name="description" content="page to collect user information" />
+      </Helmet>
       <div className="flex p-5 justify-around">
         <form ref={formInformation} >
           <h2>Informacion de contacto: </h2>

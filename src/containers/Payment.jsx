@@ -1,6 +1,7 @@
 import React, {useContext} from 'react'
 import { useNavigate } from 'react-router';
 import {PayPalButton} from 'react-paypal-button-v2';
+import {Helmet} from 'react-helmet';
 import Layout from '../components/Layout'
 import AppContext from '../context/AppContext';
 
@@ -23,6 +24,10 @@ export default function Payment() {
   };
   return (
     <Layout>
+      <Helmet>
+        <title>Payment</title>
+        <meta name="description" content="page to proceed with the payment of the product" />
+      </Helmet>
       <h2 className="text-center">
         Resumen del pedido:
       </h2>
