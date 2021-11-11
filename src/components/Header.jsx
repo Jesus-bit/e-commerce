@@ -1,7 +1,6 @@
 import React, { useContext, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo.png'
-import cart from '../assets/shopping-cart.png'
 import AppContext from '../context/AppContext'
 
 export default function Header({orderVisible, setOrderVisible}) {
